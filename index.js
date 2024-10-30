@@ -6,8 +6,12 @@ const PORT = 3001;
 app.use(express.json());
 app.use(cors());
 
-let cards = [];
-let ID = 1;
+let cards = [
+    { id: 1, text: 'New Card', color: 'blue' },
+    { id: 2, text: 'New Card', color: 'purple' },
+    { id: 3, text: 'New Card', color: 'green' }
+];
+let ID = 4;
 
 app.get('/', (req, res) => {
     res.json(cards);
